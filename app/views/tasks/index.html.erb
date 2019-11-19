@@ -1,0 +1,23 @@
+<% @tasks.each do |task| %>
+  <p>
+    <%= check_box_tag('box', value = '1', checked = task.completed) %>
+    <%= link_to task.title, task_path(task) %>
+  </p>
+<% end %>
+
+
+<!-- NUMBER 5 -->
+<form action="/tasks">
+  <input type="text" name="new">
+  <input type="submit" name="create">
+</form>
+
+<!-- primeiro loop
+task = @tasks[0]
+task.title
+task.description
+
+segundo loop
+task = @tasks[1]
+task.title
+task.description -->
